@@ -1,0 +1,207 @@
+/* ==========================================================
+   Gaya halaman Data Kependudukan Kabupaten Banyumas
+   Tema: biru & hijau, dengan dukungan mode gelap
+   ========================================================== */
+
+/* ---- Variabel warna (mode terang) ---- */
+:root {
+  --biru: #1d6fd8;
+  --biru-tua: #0b3d91;
+  --hijau: #1f9d6b;
+  --merah: #d6453d;
+  --latar: #f2f7fb;
+  --kartu: #ffffff;
+  --teks: #1b2a3a;
+  --teks-redup: #5b6b7c;
+  --garis: #dde6ee;
+  --bayangan: 0 2px 10px rgba(16, 42, 67, 0.08);
+  --radius: 16px;
+}
+
+/* ---- Variabel warna (mode gelap) ---- */
+[data-tema="gelap"] {
+  --biru: #5aa2ff;
+  --biru-tua: #0e2747;
+  --hijau: #3ccf94;
+  --merah: #ff7a70;
+  --latar: #0e1621;
+  --kartu: #172230;
+  --teks: #e6edf5;
+  --teks-redup: #9aabbd;
+  --garis: #263648;
+  --bayangan: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  background: var(--latar);
+  color: var(--teks);
+  transition: background 0.25s, color 0.25s;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ---- Header ---- */
+.header {
+  background: linear-gradient(120deg, var(--biru-tua), var(--biru) 60%, var(--hijau));
+  color: #fff;
+  padding: 28px 0;
+}
+.header__inner {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.header h1 { margin: 0 0 6px; font-size: clamp(1.4rem, 4vw, 2rem); }
+.header__desc { margin: 0; max-width: 640px; opacity: 0.92; }
+
+.btn-tema {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+}
+.btn-tema:hover { background: rgba(255, 255, 255, 0.28); }
+
+/* ---- Banner ---- */
+.banner-contoh, .banner-galat {
+  margin-top: 20px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 0.93rem;
+}
+.banner-contoh { background: #fff6d6; color: #6b5200; border: 1px solid #f0dc8a; }
+.banner-galat  { background: #ffe6e3; color: #8a1f17; border: 1px solid #f3b4ae; }
+[data-tema="gelap"] .banner-contoh { background: #3a3114; color: #f3dd8e; border-color: #5c4e1c; }
+[data-tema="gelap"] .banner-galat  { background: #3d1c19; color: #ffb4ad; border-color: #6a2e29; }
+
+/* ---- Filter tahun ---- */
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 22px 0 8px;
+  font-weight: 600;
+}
+.filter select, .kotak-cari {
+  font: inherit;
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--garis);
+  background: var(--kartu);
+  color: var(--teks);
+}
+
+/* ---- Kartu ringkasan ---- */
+.kartu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 16px 0 24px;
+}
+.kartu {
+  background: var(--kartu);
+  border-radius: var(--radius);
+  box-shadow: var(--bayangan);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 5px solid var(--biru);
+}
+.kartu--lahir   { border-top-color: var(--biru); }
+.kartu--mati    { border-top-color: var(--merah); }
+.kartu--selisih { border-top-color: var(--hijau); }
+.kartu__label { color: var(--teks-redup); font-size: 0.9rem; }
+.kartu__nilai { font-size: 2rem; line-height: 1.2; }
+.kartu__ket   { color: var(--teks-redup); font-size: 0.82rem; }
+
+/* ---- Panel & grafik ---- */
+.grafik-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.panel {
+  background: var(--kartu);
+  border-radius: var(--radius);
+  box-shadow: var(--bayangan);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+.grafik-grid .panel { margin-bottom: 0; }
+.panel h2 { margin: 0; font-size: 1.15rem; }
+.panel__sub { margin: 2px 0 14px; color: var(--teks-redup); font-size: 0.88rem; }
+
+.chart-wrap { position: relative; height: 300px; }
+.chart-wrap--tinggi { height: 380px; }
+
+/* ---- Tabel ---- */
+.tabel-atas {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.kotak-cari { min-width: 220px; }
+.tabel-scroll { overflow-x: auto; }
+
+table { width: 100%; border-collapse: collapse; min-width: 460px; }
+th, td { padding: 11px 12px; text-align: left; border-bottom: 1px solid var(--garis); }
+th.angka, td.angka { text-align: right; font-variant-numeric: tabular-nums; }
+thead th {
+  background: rgba(29, 111, 216, 0.08);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+thead th:hover { background: rgba(29, 111, 216, 0.16); }
+tbody tr:hover { background: rgba(31, 157, 107, 0.07); }
+tfoot td { font-weight: 700; border-top: 2px solid var(--garis); border-bottom: none; }
+
+.panah::after { content: "↕"; opacity: 0.35; font-size: 0.8em; }
+th[aria-sort="ascending"]  .panah::after { content: "▲"; opacity: 1; color: var(--biru); }
+th[aria-sort="descending"] .panah::after { content: "▼"; opacity: 1; color: var(--biru); }
+
+.positif { color: var(--hijau); font-weight: 600; }
+.negatif { color: var(--merah); font-weight: 600; }
+.petunjuk { margin: 10px 0 0; font-size: 0.82rem; color: var(--teks-redup); }
+.kosong { text-align: center; color: var(--teks-redup); padding: 22px; }
+
+/* ---- Footer ---- */
+.footer {
+  background: var(--biru-tua);
+  color: #dbe7f5;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+.footer p { margin: 4px 0; }
+
+/* ---- Responsif ---- */
+@media (max-width: 860px) {
+  .grafik-grid { grid-template-columns: 1fr; }
+  .kartu-grid  { grid-template-columns: 1fr; }
+  .kartu__nilai { font-size: 1.7rem; }
+}
+@media (max-width: 480px) {
+  .kotak-cari { width: 100%; }
+  .chart-wrap--tinggi { height: 340px; }
+}

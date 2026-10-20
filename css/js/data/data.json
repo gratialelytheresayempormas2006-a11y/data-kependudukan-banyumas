@@ -1,0 +1,72 @@
+{
+  "_catatan": "PERHATIAN: SEMUA ANGKA DI FILE INI ADALAH DATA CONTOH (DUMMY), BUKAN DATA RESMI. Ganti dengan data resmi dari Dispendukcapil Kabupaten Banyumas atau BPS Kabupaten Banyumas sebelum dipakai untuk laporan. Setelah diganti, ubah meta.dataContoh menjadi false dan perbarui meta.sumber serta meta.tahunPembaruan. Untuk menambah tahun atau kecamatan, cukup salin pola yang sudah ada.",
+
+  "meta": {
+    "dataContoh": true,
+    "sumber": "Data contoh (dummy), belum bersumber dari instansi resmi. Ganti dengan Dispendukcapil / BPS Kabupaten Banyumas.",
+    "tahunPembaruan": "2023 (data contoh)"
+  },
+
+  "data": {
+    "2019": [
+      { "kecamatan": "Purwokerto Selatan", "kelahiran": 1180, "kematian": 760 },
+      { "kecamatan": "Purwokerto Barat",   "kelahiran": 1010, "kematian": 690 },
+      { "kecamatan": "Purwokerto Timur",   "kelahiran": 1050, "kematian": 720 },
+      { "kecamatan": "Purwokerto Utara",   "kelahiran": 920,  "kematian": 580 },
+      { "kecamatan": "Sokaraja",           "kelahiran": 1240, "kematian": 830 },
+      { "kecamatan": "Kembaran",           "kelahiran": 1210, "kematian": 800 },
+      { "kecamatan": "Sumbang",            "kelahiran": 1320, "kematian": 870 },
+      { "kecamatan": "Baturraden",         "kelahiran": 1030, "kematian": 690 },
+      { "kecamatan": "Ajibarang",          "kelahiran": 1470, "kematian": 960 },
+      { "kecamatan": "Wangon",             "kelahiran": 1390, "kematian": 920 }
+    ],
+    "2020": [
+      { "kecamatan": "Purwokerto Selatan", "kelahiran": 1150, "kematian": 800 },
+      { "kecamatan": "Purwokerto Barat",   "kelahiran": 990,  "kematian": 730 },
+      { "kecamatan": "Purwokerto Timur",   "kelahiran": 1030, "kematian": 760 },
+      { "kecamatan": "Purwokerto Utara",   "kelahiran": 900,  "kematian": 610 },
+      { "kecamatan": "Sokaraja",           "kelahiran": 1210, "kematian": 880 },
+      { "kecamatan": "Kembaran",           "kelahiran": 1180, "kematian": 850 },
+      { "kecamatan": "Sumbang",            "kelahiran": 1290, "kematian": 920 },
+      { "kecamatan": "Baturraden",         "kelahiran": 1010, "kematian": 730 },
+      { "kecamatan": "Ajibarang",          "kelahiran": 1440, "kematian": 1010 },
+      { "kecamatan": "Wangon",             "kelahiran": 1360, "kematian": 970 }
+    ],
+    "2021": [
+      { "kecamatan": "Purwokerto Selatan", "kelahiran": 1120, "kematian": 1010 },
+      { "kecamatan": "Purwokerto Barat",   "kelahiran": 960,  "kematian": 930 },
+      { "kecamatan": "Purwokerto Timur",   "kelahiran": 1000, "kematian": 960 },
+      { "kecamatan": "Purwokerto Utara",   "kelahiran": 880,  "kematian": 780 },
+      { "kecamatan": "Sokaraja",           "kelahiran": 1190, "kematian": 1120 },
+      { "kecamatan": "Kembaran",           "kelahiran": 1150, "kematian": 1080 },
+      { "kecamatan": "Sumbang",            "kelahiran": 1260, "kematian": 1170 },
+      { "kecamatan": "Baturraden",         "kelahiran": 990,  "kematian": 930 },
+      { "kecamatan": "Ajibarang",          "kelahiran": 1410, "kematian": 1280 },
+      { "kecamatan": "Wangon",             "kelahiran": 1330, "kematian": 1230 }
+    ],
+    "2022": [
+      { "kecamatan": "Purwokerto Selatan", "kelahiran": 1100, "kematian": 820 },
+      { "kecamatan": "Purwokerto Barat",   "kelahiran": 950,  "kematian": 750 },
+      { "kecamatan": "Purwokerto Timur",   "kelahiran": 990,  "kematian": 780 },
+      { "kecamatan": "Purwokerto Utara",   "kelahiran": 870,  "kematian": 630 },
+      { "kecamatan": "Sokaraja",           "kelahiran": 1170, "kematian": 900 },
+      { "kecamatan": "Kembaran",           "kelahiran": 1130, "kematian": 870 },
+      { "kecamatan": "Sumbang",            "kelahiran": 1240, "kematian": 940 },
+      { "kecamatan": "Baturraden",         "kelahiran": 980,  "kematian": 750 },
+      { "kecamatan": "Ajibarang",          "kelahiran": 1390, "kematian": 1030 },
+      { "kecamatan": "Wangon",             "kelahiran": 1310, "kematian": 990 }
+    ],
+    "2023": [
+      { "kecamatan": "Purwokerto Selatan", "kelahiran": 1080, "kematian": 790 },
+      { "kecamatan": "Purwokerto Barat",   "kelahiran": 930,  "kematian": 720 },
+      { "kecamatan": "Purwokerto Timur",   "kelahiran": 970,  "kematian": 750 },
+      { "kecamatan": "Purwokerto Utara",   "kelahiran": 850,  "kematian": 610 },
+      { "kecamatan": "Sokaraja",           "kelahiran": 1150, "kematian": 870 },
+      { "kecamatan": "Kembaran",           "kelahiran": 1110, "kematian": 840 },
+      { "kecamatan": "Sumbang",            "kelahiran": 1220, "kematian": 910 },
+      { "kecamatan": "Baturraden",         "kelahiran": 960,  "kematian": 720 },
+      { "kecamatan": "Ajibarang",          "kelahiran": 1360, "kematian": 990 },
+      { "kecamatan": "Wangon",             "kelahiran": 1290, "kematian": 950 }
+    ]
+  }
+}
